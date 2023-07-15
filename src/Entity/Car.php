@@ -161,4 +161,7 @@ class Car
 
         return $this;
     }
+    public function __tostring() {
+        return $this-> brand;
+    }
 }
