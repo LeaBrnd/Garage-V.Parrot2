@@ -3,45 +3,27 @@
 {% block title %}Category{% endblock %}
 
 {% block body %}
-    <h1>Category</h1>
+    <h1>{{ category.name }}</h1>
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ category.id }}</td>
-            </tr>
-            <tr>
-                <th>Name</th>
-                <td>{{ category.name }}</td>
-            </tr>
-        </tbody>
-    </table>
+    <a href="{{ path('app_category_index') }}"> Voir tous les modèles</a>
 
-    <a href="{{ path('app_category_index') }}">back to list</a>
-
-    <div>
+    <div class="mt-5">
      <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Brand</th>
-                <th>Price</th>
-                <th>Fuel</th>
-                <th>Content</th>
-                <th>actions</th>
+                <th>Marque</th>
+                <th>Prix</th>
+                <th>Carburant</th>
             </tr>
         </thead>
         <tbody>
         {% for car in cars %}
             <tr>
-                <td>{{ car.id }}</td>
                 <td>{{ car.brand }}</td>
                 <td>{{ car.price }}</td>
                 <td>{{ car.fuel }}</td>
-                <td>{{ car.content }}</td>
                 <td>
-                    <a href="{{ path('app_car_show', {'id': car.id}) }}">show</a>
+                    <a href="{{ path('app_car_show', {'id': car.id}) }}"> Voir détails</a>
                 </td>
             </tr>
         {% else %}

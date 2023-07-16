@@ -13,25 +13,26 @@
           <a class="nav-link" href="{{path('app_category_index')}}"> Voitures d'occasion </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Inscription</a>
+          <a class="nav-link" href="{{path ('app_register')}}">Inscription</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Connexion</a>
+          <a class="nav-link" href="{{path ('app_login')}}">Connexion</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Espace admin
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Catégories</a></li>
-            <li><a class="dropdown-item" href="#">Cars</a></li>
+            <li><a class="dropdown-item" href="{{path('app_admin_category_index')}}">Catégories</a></li>
+            <li><a class="dropdown-item" href="{{path('app_admin_car_index')}}">Cars</a></li>
+            <li><a class="dropdown-item" href="{{path('app_admin_comment_index')}}">Commentaires</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Utilisateurs</a></li>
+            <li><a class="dropdown-item" href="{{path('app_admin_user_index')}}">Utilisateurs</a></li>
           </ul>
         </li>
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="" aria-label="Search">
+      <form class="d-flex" role="search" action="{{path('app_research') }}" method="GET">
+        <input class="form-control me-2" name= "search" type="search" placeholder="" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Chercher</button>
       </form>
     </div>

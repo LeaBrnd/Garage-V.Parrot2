@@ -3,28 +3,25 @@
 {% block title %}Hello ResearchController!{% endblock %}
 
 {% block body %}
-<div>
-    <form>
-       <input type="search" name="search" placeholder="Recherche..."/>
-       <button type="submit">Rechercher</button>
-    </form>
-</div>
-<table>
+<h1> Resultat de la recherche</h1>
+<h3 class="my-4"> Nous avons trouvé ses voitures pour vous : </h3>
+
     {% for car in cars %}
-        <tr>
-            <td>{{ car.id }}</td>
-            <td>{{ car.brand }}</td>
-            <td>{{ car.price }}</td>
-            <td>{{ car.fuel }}</td>
-            <td>{{ car.content }}</td>
-            <td>
-                <a href="{{ path('app_car_show', {'id': car.id}) }}">show</a>
-            </td>
-            </tr>
+        <div>
+            <h4> {{ car.brand }},{{ car.price }},{{ car.fuel }} </h4>
+            
+        <div>
+            <a href="{{ path('app_car_show', {'id': car.id}) }}"> Voir page article</a>
+        </div>
+    </div>
+            
      {% else %}
         <tr>
             <td colspan="6">no records found</td>
         </tr>
+        <div>
+        Aucune voiture ne correspond à vos critères...
+        </div>
     {% endfor %}
-</table>
+
 {% endblock %}
