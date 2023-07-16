@@ -44,5 +44,24 @@ class CarRepository extends ServiceEntityRepository
 //            ->getQuery()
 //            ->getOneOrNullResult()
 //        ;
-//    }
+ //   }
+//    
+
+    /**
+     * @return Car[] Returns an array of Car objects
+     */
+  public function findBySearch(string $text): array
+     {
+       return $this->createQueryBuilder('c')
+           ->andWhere('c.content LIKE :val')
+           ->setParameter('val', "%$text%")
+           ->getQuery()
+           ->getResult()    
+        ;
+  }
+
 }
+
+
+
+

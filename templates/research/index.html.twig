@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ResearchController!{% endblock %}
+
+{% block body %}
+<div>
+    <form>
+       <input type="search" name="search" placeholder="Recherche..."/>
+       <button type="submit">Rechercher</button>
+    </form>
+</div>
+<table>
+    {% for car in cars %}
+        <tr>
+            <td>{{ car.id }}</td>
+            <td>{{ car.brand }}</td>
+            <td>{{ car.price }}</td>
+            <td>{{ car.fuel }}</td>
+            <td>{{ car.content }}</td>
+            <td>
+                <a href="{{ path('app_car_show', {'id': car.id}) }}">show</a>
+            </td>
+            </tr>
+     {% else %}
+        <tr>
+            <td colspan="6">no records found</td>
+        </tr>
+    {% endfor %}
+</table>
+{% endblock %}
