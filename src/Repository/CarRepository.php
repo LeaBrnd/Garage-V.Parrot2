@@ -53,7 +53,8 @@ class CarRepository extends ServiceEntityRepository
   public function findBySearch(string $text): array
      {
        return $this->createQueryBuilder('c')
-           ->andWhere('c.content LIKE :val')
+           ->where('c.brand LIKE :val')
+           ->orWhere('c.content LIKE :val')
            ->setParameter('val', "%$text%")
            ->getQuery()
            ->getResult()    

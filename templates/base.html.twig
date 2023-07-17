@@ -13,12 +13,11 @@
         {% endblock %}
         
         <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-
-        {% block javascripts %}
+       {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </head>
-    <body>
+    <body class="{% block body_class %}sub_page{% endblock %}">
         {{ include ('navbar.html.twig')}}
        <main class="container pt-5">
         {% block body %}{% endblock %} </main>
