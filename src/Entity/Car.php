@@ -37,6 +37,8 @@ class Car
     #[ORM\OneToMany(mappedBy: 'car', targetEntity: Comment::class)]
     private Collection $comments;
 
+   
+
     public function __construct()
     {
         $this->category = new ArrayCollection();
@@ -164,4 +166,6 @@ class Car
     public function __tostring() {
         return $this-> brand;
     }
+
+
 }
