@@ -4,23 +4,24 @@
 
 {% block body %}
     <h1> Tous nos modèles</h1>
+  <br>
+     <h4>Modèle</h4>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for category in categories %}
-            <tr>
-                <td>{{ category.id }}</td>
-                <td>{{ category.name }}</td>
-                <td>
-                    <a href="{{ path('app_category_show', {'id': category.id}) }}"> Consulter la page </a>
-                </td>
-            </tr>
+     {% for category in categories %}    
+        
+        <div class="imgcar">
+        
+        <img src="{{ category.photo }}">
+        
+        </div>
+                  
+            <div>
+            {{ category.name }}
+                <div>
+                <a href="{{ path('app_category_show', {'id': category.id}) }}"> Consulter la page </a>
+                </div>
+        </div>  
+        </div>
         {% else %}
             <tr>
                 <td colspan="3">Aucun modèle trouvé</td>

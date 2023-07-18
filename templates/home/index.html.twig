@@ -4,8 +4,33 @@
 
 {% block body_class %}homepage{% endblock %}
 {% block body %}
+<section class="hometotale">
+<div class="titre"><h1>Bienvenue dans le Garage V.Parot<br>Ici toute voiture est bonne à réparer.</h1></div>
 
-<div class="titre"> <h1> Bienvenue dans le Garage V.Parot, ici toute voiture est bonne à réparer .</h1> </div>
-<div class="carrosserie"> Carrosserie </div>
+<div class="p-home">
+<p> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum at vehicula est. Vivamus eget efficitur dui. Donec bibendum pulvinar rhoncus. Vestibulum massa mi, lacinia imperdiet dolor ac, elementum mattis ligula. Nullam vitae tellus elit. Fusce vitae molestie arcu, eu convallis tortor. Integer at metus suscipit, mattis elit nec, tincidunt orci. Aenean varius tellus sit amet massa sollicitudin, vitae volutpat ipsum gravida. Vestibulum accumsan, sapien non pellentesque ultrices, nibh neque ornare risus, eu viverra ipsum nulla eu risus. Donec tortor lacus, ornare nec vehicula eu, aliquet vel metus. Pellentesque tempus ut nisl sit amet posuere. Aliquam nec tellus fermentum, cursus quam tempor, semper nisi. Pellentesque pharetra nisl vitae leo ullamcorper, non consequat augue tempor. Vivamus tincidunt velit a sodales facilisis. Vivamus blandit, velit ac lobortis feugiat, justo nibh vestibulum nibh, et tincidunt felis sapien vel orci.z</p>
+</div>
+<link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+
+<div class="homecontainer">
+
+  <div class="row">
+ 
+    <div class="col-sm-4">
+    <img style="width: 85%;" src="{{asset('media/Carrosserie.png')}}"> 
+    </div>
+    <div class="col-sm-4">
+    <img style="width: 85%;" src="{{asset('media/Carrosserie.png')}}">
+      
+    </div>
+    <div class="col-sm-4">
+    <img style="width: 85%;" src="{{asset('media/Carrosserie.png')}}">
+    </div>
+  </div>
+</div>
+
+</section>
 
 {% endblock %}
+
+

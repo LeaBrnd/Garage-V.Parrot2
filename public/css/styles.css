@@ -1,21 +1,85 @@
 .homepage{
     background: url(/media/istockphoto-1284285171-612x612.jpg) center no-repeat fixed;
     background-size: cover;
+    
 }
-
-.bgimage{
-   width: 100%;
-    height: 100%;
+.hometotale{
+background-color: rgb(14 14 14 / 68%);
+width: 100%;
+height: auto;
+margin: 0;
+padding: 20px 80px;
 }
-
+.homecontainer{
+margin: ;
+}
 .titre{
-position: absolute;
+position: relative;
 text-align: center;
 text-transform: uppercase;
-color: aliceblue;
+color: rgba(217, 199, 191, 0.919);
 }
 
 .navbar{
 z-index: 1;
+background-color: rgb(156, 157, 161) !important;
+
+}
+.nav-item{
+padding: 15px;
+}
+
+.form-control{
+background-color: rgba(236, 233, 233, 0.728);
+}
+
+.container{
+padding-top: 25%;
+color: rgb(70, 36, 11);
+
+}
+
+.col{
+box-sizing: none;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+.imgcar{
+display: flex;
+justify-content: space-between;
+flex-direction: row;
+}
+
+.services{
+text-align: center; 
+
+}
+
+.box-services {
+    display: flex;
+    flex-wrap: wrap; 
+    flex-direction : row;
+    justify-content: center; 
+    justify-content: space-evenly;
+    height : 400px;
+
+}
+  .service {
+    display: flex; 
+    justify-content : center;
+    align-items: center; 
+    width: 400px;
+    cursor:pointer;
+
+}
+
+.p-home{
+color: aliceblue;
+margin: 100px 10px;
+
 
 }

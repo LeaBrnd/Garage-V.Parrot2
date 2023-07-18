@@ -1,33 +1,16 @@
 {% extends 'base.html.twig' %}
 
+
+
 {% block title %}Carrosserie index{% endblock %}
 
+{% block body_class %}services{% endblock %}
+
 {% block body %}
-    <h1>Carrosserie index</h1>
+<h1> Nos services </h1>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for carrosserie in carrosseries %}
-            <tr>
-                <td>{{ carrosserie.id }}</td>
-                <td>
-                    <a href="{{ path('app_carrosserie_show', {'id': carrosserie.id}) }}">show</a>
-                    <a href="{{ path('app_carrosserie_edit', {'id': carrosserie.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="2">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+<link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 
-    <a href="{{ path('app_carrosserie_new') }}">Create new</a>
+{{ include ('homecolumn.twig')}}
+
 {% endblock %}

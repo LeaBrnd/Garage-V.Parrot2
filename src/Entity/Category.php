@@ -21,6 +21,12 @@ class Category
     #[ORM\ManyToMany(targetEntity: Car::class, mappedBy: 'category')]
     private Collection $cars;
 
+    #[ORM\Column(length: 255)]
+    private ?string $photo = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $image = null;
+
     public function __construct()
     {
         $this->cars = new ArrayCollection();
@@ -71,6 +77,30 @@ class Category
     }
 public function __tostring() {
     return $this-> name;
+}
+
+public function getPhoto(): ?string
+{
+    return $this->photo;
+}
+
+public function setPhoto(string $photo): static
+{
+    $this->photo = $photo;
+
+    return $this;
+}
+
+public function getImage(): ?string
+{
+    return $this->image;
+}
+
+public function setImage(?string $image): static
+{
+    $this->image = $image;
+
+    return $this;
 }
 
 }

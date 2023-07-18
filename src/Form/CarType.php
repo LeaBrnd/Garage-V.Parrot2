@@ -18,6 +18,7 @@ class CarType extends AbstractType
             ->add('content')
             ->add('user')
             ->add('category')
+            ->add('photo')
         ;
     }
 
