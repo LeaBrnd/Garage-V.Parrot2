@@ -21,7 +21,7 @@ class Category
     #[ORM\ManyToMany(targetEntity: Car::class, mappedBy: 'category')]
     private Collection $cars;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, nullable: true)]
     private ?string $photo = null;
 
     #[ORM\Column(length: 255, nullable: true)]
