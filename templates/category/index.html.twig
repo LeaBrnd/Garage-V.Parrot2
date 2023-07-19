@@ -2,19 +2,15 @@
 
 {% block title %}Category index{% endblock %}
 
+{% block body_class %}Categorie{% endblock %}
 {% block body %}
+     <div class="js-filter-form"> </div>
     <h1> Tous nos modèles</h1>
   <br>
      <h4>Modèle</h4>
 
      {% for category in categories %}    
         
-        <div class="imgcar">
-        
-        <img src="{{ category.photo }}">
-        
-        </div>
-                  
             <div>
             {{ category.name }}
                 <div>
