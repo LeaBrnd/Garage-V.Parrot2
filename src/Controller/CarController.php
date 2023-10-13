@@ -14,13 +14,13 @@ use Symfony\Component\Routing\Annotation\Route;
 #[Route('/car')]
 class CarController extends AbstractController
 {
-    //#[Route('/', name: 'app_car_index', methods: ['GET'])]
-    //public function index(CarRepository $carRepository): Response
-    //{
-    //    return $this->render('car/index.html.twig', [
-         //   'cars' => $carRepository->findAll(),
-       // ]);
-   // }
+    #[Route('/', name: 'app_car_index', methods: ['GET'])]
+    public function index(CarRepository $carRepository): Response
+    {
+        return $this->render('car/index.html.twig', [
+            'cars' => $carRepository->findAll(),
+        ]);
+    }
 
    
     #[Route('/{id}', name: 'app_car_show', methods: ['GET'])]
