@@ -12,12 +12,24 @@ class Car1Type extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('brand')
-            ->add('price')
-            ->add('fuel')
-            ->add('content')
-            ->add('user')
-            ->add('category')
+            ->add('brand', TextType::class, [
+                'required' => false,
+            ])
+            ->add('price', IntegerType::class, [
+                'required' => false,
+            ])
+            ->add('fuel', TextType::class, [
+                'required' => false,
+            ])
+            ->add('content', TextType::class, [
+                'required' => false,
+            ])
+            ->add('user' , TextType::class, [
+                'required' => false,
+            ])
+            ->add('category', TextType::class, [
+                'required' => false,
+            ])
         ;
     }
 

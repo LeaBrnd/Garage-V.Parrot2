@@ -1,0 +1,50 @@
+{# templates/admin_car/index.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Liste des voitures</h1>
+
+    <form method="get" class="mb-3">
+        <div class="row">
+            <div class="col-md-3">
+                {{ form_row(form.price) }}
+            </div>
+            <div class="col-md-3">
+                {{ form_row(form.brand) }}
+            </div>
+            <div class="col-md-3">
+                {{ form_row(form.fuel) }}
+            </div>
+            <div class="col-md-3">
+                {{ form_row(form.mileage) }}
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Filtrer</button>
+    </form>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Marque</th>
+                <th>Modèle</th>
+                <th>Prix</th>
+                <th>Kilométrage</th>
+                <th>Carburant</th>
+                <!-- Autres en-têtes -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for car in cars %}
+                <tr>
+                    <td>{{ car.brand }}</td>
+                    <td>{{ car.model }}</td>
+                    <td>{{ car.price }}</td>
+                    <td>{{ car.mileage }}</td>
+                    <td>{{ car.fuel }}</td>
+                    <!-- Autres colonnes de données -->
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Liste des Voitures</h1>
+    {{ form(form) }}
+
+    <table>
+        <thead>
+            <tr>
+                <th>Marque</th>
+                <th>Modèle</th>
+                <th>Prix</th>
+                <!-- Autres colonnes -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for car in cars %}
+                <tr>
+                    <td>{{ car.brand }}</td>
+                    <td>{{ car.model }}</td>
+                    <td>{{ car.price }}</td>
+                    <!-- Autres données de la voiture -->
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
